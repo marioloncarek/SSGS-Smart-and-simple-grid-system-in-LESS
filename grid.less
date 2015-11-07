@@ -1,0 +1,158 @@
+/* 
+- Name: SSGS
+- Version: 1.0
+- Latest update: 7.11.2015.
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+LESS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* GRID VARIABLES */
+
+@row_wide_screen: 80%;
+@row_960: 90%;
+@row_tablet: 90%;
+@gutter: 2%;
+
+/* MIXINS */
+
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+1200px
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.row {
+    margin: 0 auto;
+    width: @row_wide_screen;
+    .box-sizing;
+    *zoom: 1;
+    .row {
+        width: 100%;
+    }
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+    .span12,
+    .span11,
+    .span10,
+    .span9,
+    .span8,
+    .span7,
+    .span6,
+    .span5,
+    .span4,
+    .span3,
+    .span2,
+    .span1 {
+        float: left;
+        .box-sizing;
+        margin: 0 @gutter;
+    }
+    .span12 {
+        width: 100% - (2 * @gutter);
+    }
+    .span11 {
+        width: 91.667% - (2 * @gutter);
+    }
+    .span10 {
+        width: 83.333% - (2 * @gutter);
+    }
+    .span9 {
+        width: 75% - (2 * @gutter);
+    }
+    .span8 {
+        width: 66.667% - (2 * @gutter);
+    }
+    .span7 {
+        width: 58.333% - (2 * @gutter);
+    }
+    .span6 {
+        width: 50% - (2 * @gutter);
+    }
+    .span5 {
+        width: 41.667% - (2 * @gutter);
+    }
+    .span4 {
+        width: 33.333% - (2 * @gutter);
+    }
+    .span3 {
+        width: 25% - (2 * @gutter);
+    }
+    .span2 {
+        width: 16.666% - (2 * @gutter);
+    }
+    .span1 {
+        width: 8.333% - (2 * @gutter);
+    }
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+960px
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .row {
+        width: @row_960;
+    }
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+TABLETS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .row {
+        width: @row_tablet;
+    }
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+MOBILE 100%
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (max-width: 767px) {
+    /* Grid mobile */
+    .row {
+        padding-left: 3%;
+        padding-right: 3%;
+        width: 100%;
+        .box-sizing;
+        *zoom: 1;
+        .span12,
+        .span11,
+        .span10,
+        .span9,
+        .span8,
+        .span7,
+        .span6,
+        .span5,
+        .span4,
+        .span3,
+        .span2,
+        .span1 {
+            display: block;
+            float: none;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
