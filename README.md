@@ -93,5 +93,12 @@ Create your grid, define widths and gutter and you are ready to go! Simple as th
   
   <div class="span3">grid 3</div>
   <div class="span3">grid 3</div>
+  <div class="span3">grid 3</div>
+  <div class="span3">grid 3</div>
+  
 </div>
 ```
+
+## Made with (thanks)
+- [LESS.js](http://lesscss.org/)
+- [Codepen](http://codepen.io)
