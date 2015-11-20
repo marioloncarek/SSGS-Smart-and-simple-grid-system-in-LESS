@@ -1,7 +1,7 @@
 /* 
 - Name: SSGS
-- Version: 1.0
-- Latest update: 7.11.2015.
+- Version: 1.1
+- Latest update: 20.11.2015.
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -14,10 +14,26 @@ LESS
 
 /* GRID VARIABLES */
 
+
+/* Wide screen row width from 1399px and up */
+
 @row_wide_screen: 80%;
-@row_960: 90%;
-@row_tablet: 90%;
-@gutter: 2%;
+
+/* Row width from 1200px to 1399px */
+
+@row_1200-1400: 90%;
+
+/* Row width from 960px to 1199px */
+
+@row_960-1200: 90%;
+
+/* Tablet row width from 768px to 960px */
+
+@row_tablet: 95%;
+
+/* Gutter width */
+
+@gutter: 1%;
 
 /* MIXINS */
 
@@ -29,7 +45,7 @@ LESS
 
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
-1200px
+1400px AND UP
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .row {
@@ -104,12 +120,23 @@ LESS
 
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
-960px
+1200px TO 1399px
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .row {
+        width: @row_1200-1400;
+    }
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+960px TO 1199px
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
     .row {
-        width: @row_960;
+        width: @row_960-1200;
     }
 }
 
@@ -126,7 +153,7 @@ TABLETS
 
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
-MOBILE 100%
+MOBILES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media only screen and (max-width: 767px) {
