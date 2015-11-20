@@ -50,13 +50,15 @@ http://codepen.io/riogrande/pen/LpgRvV
 ##### < 767px mobile
 
 ## LESS variables
-`@row_wide_screen` - width of container > 1199px, default = 80% of the browser
+`@row_wide_screen` - width of container > 1399px, default = 80% of the browser
 
-`@row_960` - width of container between 960 and 1199px, default = 90% of the browser
+`@row_1200-1400` - width of container between 1200 and 1399px, default = 90% of the browser
 
-`@row_tablet` - width of container between 768 and 959, default = 90% of the browser
+`@row_960-1200` - width of container between 960 and 1199px, default = 90% of the browser
 
-`@gutter` - margin between columns > 1199px, default = 2% (2% from left and 2% from right)
+`@row_tablet` - width of container between 768 and 959, default = 95% of the browser
+
+`@gutter` - margin between columns > 1199px, default = 1% (1% from left and 1% from right)
 
 ##### Mobile row is not a variable, its default value is 100%
 
