@@ -44,7 +44,8 @@ http://codepen.io/riogrande/pen/LpgRvV
 1 - 8.333%
 
 ## Media queries
-##### > 1199px - widescreens
+##### > 1399px - widescreens
+##### < 1399px, >=1199 - widescreens
 ##### < 1199px , >= 960px smaller screens
 ##### < 959px , >= 768px tablets
 ##### < 767px mobile
