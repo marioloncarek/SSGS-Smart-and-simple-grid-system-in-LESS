@@ -1,7 +1,7 @@
 /* 
 - Name: SSGS
-- Version: 1.1
-- Latest update: 20.11.2015.
+- Version: 2.0
+- Latest update: 15.1.2016.
 - Author: Mario Loncarek
 - Author web site: http://marioloncarek.com
 */
@@ -14,21 +14,13 @@ LESS
 /* Row width from 960px to 1199px */
 /* Tablet row width from 768px to 960px */
 /* Gutter width */
-/* MIXINS */
-.box-sizing {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/* Full-width gutter width */
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 1400px AND UP
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .row {
   margin: 0 auto;
   width: 80%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   *zoom: 1;
 }
 .row .row {
@@ -42,59 +34,213 @@ LESS
 .row:after {
   clear: both;
 }
-.row .span12,
-.row .span11,
-.row .span10,
-.row .span9,
-.row .span8,
-.row .span7,
-.row .span6,
-.row .span5,
-.row .span4,
-.row .span3,
-.row .span2,
-.row .span1 {
+.row .span-12,
+.row .span-11,
+.row .span-10,
+.row .span-9,
+.row .span-8,
+.row .span-7,
+.row .span-6,
+.row .span-5,
+.row .span-4,
+.row .span-3,
+.row .span-2,
+.row .span-1,
+.row .span-1-1,
+.row .span-1-2,
+.row .span-1-3,
+.row .span-2-3,
+.row .span-1-4,
+.row .span-2-4,
+.row .span-3-4,
+.row .span-1-5,
+.row .span-2-5,
+.row .span-3-5,
+.row .span-4-5,
+.row .span-1-6,
+.row .span-2-6,
+.row .span-3-6,
+.row .span-4-6,
+.row .span-5-6,
+.row .span-golden-big,
+.row .span-golden-small {
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0 1%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
-.row .span12 {
-  width: 98%;
+.row-full-width {
+  width: 100%;
+  *zoom: 1;
 }
-.row .span11 {
-  width: 89.667%;
+.row-full-width .row-full-width {
+  width: 100%;
 }
-.row .span10 {
-  width: 81.333%;
+.row-full-width:before,
+.row-full-width:after {
+  display: table;
+  content: " ";
 }
-.row .span9 {
-  width: 73%;
+.row-full-width:after {
+  clear: both;
 }
-.row .span8 {
-  width: 64.667%;
+.row-full-width .span-12,
+.row-full-width .span-11,
+.row-full-width .span-10,
+.row-full-width .span-9,
+.row-full-width .span-8,
+.row-full-width .span-7,
+.row-full-width .span-6,
+.row-full-width .span-5,
+.row-full-width .span-4,
+.row-full-width .span-3,
+.row-full-width .span-2,
+.row-full-width .span-1,
+.row-full-width .span-1-1,
+.row-full-width .span-1-2,
+.row-full-width .span-1-3,
+.row-full-width .span-2-3,
+.row-full-width .span-1-4,
+.row-full-width .span-2-4,
+.row-full-width .span-3-4,
+.row-full-width .span-1-5,
+.row-full-width .span-2-5,
+.row-full-width .span-3-5,
+.row-full-width .span-4-5,
+.row-full-width .span-1-6,
+.row-full-width .span-2-6,
+.row-full-width .span-3-6,
+.row-full-width .span-4-6,
+.row-full-width .span-5-6,
+.row-full-width .span-golden-big,
+.row-full-width .span-golden-small {
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
 }
-.row .span7 {
-  width: 56.333%;
+.row,
+.row-full-width {
+  /* Classic 12 column grid */
+  /* Extended grid */
 }
-.row .span6 {
-  width: 48%;
+.row .span-12,
+.row-full-width .span-12 {
+  width: 100%;
 }
-.row .span5 {
-  width: 39.667%;
+.row .span-11,
+.row-full-width .span-11 {
+  width: 91.667%;
 }
-.row .span4 {
-  width: 31.333%;
+.row .span-10,
+.row-full-width .span-10 {
+  width: 83.333%;
 }
-.row .span3 {
-  width: 23%;
+.row .span-9,
+.row-full-width .span-9 {
+  width: 75%;
 }
-.row .span2 {
-  width: 14.666%;
+.row .span-8,
+.row-full-width .span-8 {
+  width: 66.667%;
 }
-.row .span1 {
-  width: 6.333%;
+.row .span-7,
+.row-full-width .span-7 {
+  width: 58.333%;
+}
+.row .span-6,
+.row-full-width .span-6 {
+  width: 50%;
+}
+.row .span-5,
+.row-full-width .span-5 {
+  width: 41.667%;
+}
+.row .span-4,
+.row-full-width .span-4 {
+  width: 33.333%;
+}
+.row .span-3,
+.row-full-width .span-3 {
+  width: 25%;
+}
+.row .span-2,
+.row-full-width .span-2 {
+  width: 16.666%;
+}
+.row .span-1,
+.row-full-width .span-1 {
+  width: 8.333%;
+}
+.row .span-1-1,
+.row-full-width .span-1-1 {
+  width: 100%;
+}
+.row .span-1-2,
+.row-full-width .span-1-2 {
+  width: 50%;
+}
+.row .span-1-3,
+.row-full-width .span-1-3 {
+  width: 33.333%;
+}
+.row .span-2-3,
+.row-full-width .span-2-3 {
+  width: 66.667%;
+}
+.row .span-1-4,
+.row-full-width .span-1-4 {
+  width: 25%;
+}
+.row .span-2-4,
+.row-full-width .span-2-4 {
+  width: 50%;
+}
+.row .span-3-4,
+.row-full-width .span-3-4 {
+  width: 75%;
+}
+.row .span-1-5,
+.row-full-width .span-1-5 {
+  width: 20%;
+}
+.row .span-2-5,
+.row-full-width .span-2-5 {
+  width: 40%;
+}
+.row .span-3-5,
+.row-full-width .span-3-5 {
+  width: 60%;
+}
+.row .span-4-5,
+.row-full-width .span-4-5 {
+  width: 80%;
+}
+.row .span-1-6,
+.row-full-width .span-1-6 {
+  width: 16.666%;
+}
+.row .span-2-6,
+.row-full-width .span-2-6 {
+  width: 33.333%;
+}
+.row .span-3-6,
+.row-full-width .span-3-6 {
+  width: 50%;
+}
+.row .span-4-6,
+.row-full-width .span-4-6 {
+  width: 66.667%;
+}
+.row .span-5-6,
+.row-full-width .span-5-6 {
+  width: 83.333%;
+}
+.row .span-golden-big,
+.row-full-width .span-golden-big {
+  width: 61.803398875%;
+}
+.row .span-golden-small,
+.row-full-width .span-golden-small {
+  width: 38.196601125%;
 }
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 1200px TO 1399px
@@ -117,7 +263,7 @@ TABLETS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .row {
-    width: 95%;
+    width: 100%;
   }
 }
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -126,29 +272,75 @@ MOBILES
 @media only screen and (max-width: 767px) {
   /* Grid mobile */
   .row {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    *zoom: 1;
   }
-  .row .span12,
-  .row .span11,
-  .row .span10,
-  .row .span9,
-  .row .span8,
-  .row .span7,
-  .row .span6,
-  .row .span5,
-  .row .span4,
-  .row .span3,
-  .row .span2,
-  .row .span1 {
-    display: block;
-    float: none;
-    margin-left: 0;
+  .row .span-12,
+  .row-full-width .span-12,
+  .row .span-11,
+  .row-full-width .span-11,
+  .row .span-10,
+  .row-full-width .span-10,
+  .row .span-9,
+  .row-full-width .span-9,
+  .row .span-8,
+  .row-full-width .span-8,
+  .row .span-7,
+  .row-full-width .span-7,
+  .row .span-6,
+  .row-full-width .span-6,
+  .row .span-5,
+  .row-full-width .span-5,
+  .row .span-4,
+  .row-full-width .span-4,
+  .row .span-3,
+  .row-full-width .span-3,
+  .row .span-2,
+  .row-full-width .span-2,
+  .row .span-1,
+  .row-full-width .span-1,
+  .row .span-1-1,
+  .row-full-width .span-1-1,
+  .row .span-1-2,
+  .row-full-width .span-1-2,
+  .row .span-1-3,
+  .row-full-width .span-1-3,
+  .row .span-2-3,
+  .row-full-width .span-2-3,
+  .row .span-1-4,
+  .row-full-width .span-1-4,
+  .row .span-2-4,
+  .row-full-width .span-2-4,
+  .row .span-3-4,
+  .row-full-width .span-3-4,
+  .row .span-2-5,
+  .row-full-width .span-2-5,
+  .row .span-3-5,
+  .row-full-width .span-3-5,
+  .row .span-4-5,
+  .row-full-width .span-4-5,
+  .row .span-1-6,
+  .row-full-width .span-1-6,
+  .row .span-2-6,
+  .row-full-width .span-2-6,
+  .row .span-3-6,
+  .row-full-width .span-3-6,
+  .row .span-4-6,
+  .row-full-width .span-4-6,
+  .row .span-5-6,
+  .row-full-width .span-5-6,
+  .row .span-golden-big,
+  .row-full-width .span-golden-big,
+  .row .span-golden-small,
+  .row-full-width .span-golden-small {
     width: 100%;
+  }
+  .row .span-1-5,
+  .row-full-width .span-1-5 {
+    width: 50%;
+  }
+  .mobile-hide {
+    display: none !important;
   }
 }
