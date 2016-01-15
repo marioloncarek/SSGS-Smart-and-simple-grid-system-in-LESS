@@ -1,1 +1,154 @@
-.box-sizing{box-sizing:border-box}.row{margin:0 auto;width:80%;box-sizing:border-box;*zoom:1}.row .row{width:100%}.row:before,.row:after{display:table;content:" "}.row:after{clear:both}.row .span12,.row .span11,.row .span10,.row .span9,.row .span8,.row .span7,.row .span6,.row .span5,.row .span4,.row .span3,.row .span2,.row .span1{float:left;box-sizing:border-box;margin:0 1%}.row .span12{width:98%}.row .span11{width:89.667%}.row .span10{width:81.333%}.row .span9{width:73%}.row .span8{width:64.667%}.row .span7{width:56.333%}.row .span6{width:48%}.row .span5{width:39.667%}.row .span4{width:31.333%}.row .span3{width:23%}.row .span2{width:14.666%}.row .span1{width:6.333%}@media only screen and (min-width:1200px) and (max-width:1399px){.row{width:90%}}@media only screen and (min-width:960px) and (max-width:1199px){.row{width:90%}}@media only screen and (min-width:768px) and (max-width:959px){.row{width:95%}}@media only screen and (max-width:767px){.row{padding-left:3%;padding-right:3%;width:100%;box-sizing:border-box;*zoom:1}.row .span12,.row .span11,.row .span10,.row .span9,.row .span8,.row .span7,.row .span6,.row .span5,.row .span4,.row .span3,.row .span2,.row .span1{display:block;float:none;margin-left:0;width:100%}}
+/* 
+- Name: SSGS
+- Version: 1.1
+- Latest update: 20.11.2015.
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+LESS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* GRID VARIABLES */
+/* Wide screen row width from 1399px and up */
+/* Row width from 1200px to 1399px */
+/* Row width from 960px to 1199px */
+/* Tablet row width from 768px to 960px */
+/* Gutter width */
+/* MIXINS */
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+1400px AND UP
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.row {
+  margin: 0 auto;
+  width: 80%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+.row .row {
+  width: 100%;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+.row .span12,
+.row .span11,
+.row .span10,
+.row .span9,
+.row .span8,
+.row .span7,
+.row .span6,
+.row .span5,
+.row .span4,
+.row .span3,
+.row .span2,
+.row .span1 {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 1%;
+}
+.row .span12 {
+  width: 98%;
+}
+.row .span11 {
+  width: 89.667%;
+}
+.row .span10 {
+  width: 81.333%;
+}
+.row .span9 {
+  width: 73%;
+}
+.row .span8 {
+  width: 64.667%;
+}
+.row .span7 {
+  width: 56.333%;
+}
+.row .span6 {
+  width: 48%;
+}
+.row .span5 {
+  width: 39.667%;
+}
+.row .span4 {
+  width: 31.333%;
+}
+.row .span3 {
+  width: 23%;
+}
+.row .span2 {
+  width: 14.666%;
+}
+.row .span1 {
+  width: 6.333%;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+1200px TO 1399px
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .row {
+    width: 90%;
+  }
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+960px TO 1199px
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .row {
+    width: 90%;
+  }
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+TABLETS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .row {
+    width: 95%;
+  }
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+MOBILES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 767px) {
+  /* Grid mobile */
+  .row {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *zoom: 1;
+  }
+  .row .span12,
+  .row .span11,
+  .row .span10,
+  .row .span9,
+  .row .span8,
+  .row .span7,
+  .row .span6,
+  .row .span5,
+  .row .span4,
+  .row .span3,
+  .row .span2,
+  .row .span1 {
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+}
