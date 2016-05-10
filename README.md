@@ -1,3 +1,6 @@
+# THIS REPO IS DEPRECATED, PLEASE SEE MY NEWEST VERSION IN SCSS:
+##https://github.com/marioloncarek/SSGS-Smart-and-simple-grid-in-SCSS
+
 # SSGS - Smart and simple grid system written in LESS
 
 ## Features
